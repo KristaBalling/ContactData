@@ -19,6 +19,9 @@
                     <items>
                         <MenuItem text="Edit..." onAction="#showEditContactDialog"/>
                     </items>
+                    <items>
+                        <MenuItem text="Delete" onAction="#deleteContact"/>
+                    </items>
                 </Menu>
             </menus>
         </MenuBar>
@@ -26,6 +29,9 @@
 
     <center>
         <TableView fx:id="contactsTable">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
             <columns>
                 <TableColumn text="First Name">
                 <cellValueFactory>

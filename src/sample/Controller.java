@@ -9,7 +9,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import sample.datamodel.Contact;
 import sample.datamodel.ContactData;
-import sample.ContactController;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -33,17 +32,17 @@ public class Controller {
 
     @FXML
     public void showAddContactDialog(){
-        Dialog<ButtonType> dialog = new Dialog<ButtonType>();
+        Dialog<ButtonType> dialog = new Dialog<>();
         dialog.initOwner(mainPanel.getScene().getWindow());
         dialog.setTitle("Add New Contact");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("contactdialog.fxml"));
-        try {
-            dialog.getDialogPane().setContent(fxmlLoader.load());
-        } catch(IOException e) {
-            System.out.println("Couldn't load the dialog");
-            e.printStackTrace();
-            return;
+      try {
+           dialog.getDialogPane().setContent(fxmlLoader.load());
+       } catch(IOException e) {
+           System.out.println("Couldn't load the dialog");
+           e.printStackTrace();
+           return;
         }
 
         dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);

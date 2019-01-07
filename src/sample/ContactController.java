@@ -1,7 +1,6 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import sample.datamodel.Contact;
 
@@ -40,7 +39,6 @@ public class ContactController {
         contact.setFirstName(firstNameField.getText());
         contact.setLastName(lastNameField.getText());
         contact.setPhoneNumber(phoneNumberField.getText());
-        contact.setNotes(notesField.getText());
         contact.setNotes(notesField.getText());
     }
 
