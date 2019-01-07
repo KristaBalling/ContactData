@@ -44,7 +44,7 @@ public class ContactData {
         contacts.add(item);
     }
 
-    public void deleteContacts(Contact item) {
+    public void deleteContact(Contact item) {
         contacts.remove(item);
     }
 
