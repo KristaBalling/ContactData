@@ -16,6 +16,12 @@
                 <items>
                     <MenuItem text="Add..." onAction="#showAddContactDialog"/>
                 </items>
+                    <items>
+                        <MenuItem text="Edit..." onAction="#showEditContactDialog"/>
+                    </items>
+                    <items>
+                        <MenuItem text="Delete" onAction="#deleteContact"/>
+                    </items>
                 </Menu>
             </menus>
         </MenuBar>
